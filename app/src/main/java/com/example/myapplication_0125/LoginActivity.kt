@@ -10,11 +10,17 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
+        //회원가입 화면으로 이동
         val moveBtn: Button = findViewById(R.id.move_btn)
-
         moveBtn.setOnClickListener{
             val intent = Intent(this, RegisterActivity::class.java)
             startActivity(intent)
+        }
+
+        //로그인 후 시작 화면으로 이동
+        val loginBtn: Button = findViewById(R.id.login_button)
+        loginBtn.setOnClickListener {
+
         }
     }
 }
