@@ -14,7 +14,7 @@ class RegisterActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        supportActionBar!!.setHomeAsUpIndicator(R.drawable.left_arrow_blue)
+        supportActionBar!!.setHomeAsUpIndicator(R.drawable.short_left_arrow_16px)
 
     }
 
