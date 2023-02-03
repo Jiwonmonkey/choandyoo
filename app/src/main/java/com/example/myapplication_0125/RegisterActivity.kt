@@ -12,19 +12,20 @@ class RegisterActivity : AppCompatActivity() {
 
         val toolbar = findViewById<Toolbar>(R.id.back_login)
         setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayShowTitleEnabled(false)
+        supportActionBar!!.setDisplayShowTitleEnabled(false)
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setHomeAsUpIndicator(R.drawable.short_left_arrow_16px)
 
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item?.itemId) {
+        val id = item.itemId
+        when (id) {
             android.R.id.home -> {
                 finish()
                 return true
             }
-            else -> return super.onOptionsItemSelected(item)
         }
+        return super.onOptionsItemSelected(item)
     }
 }

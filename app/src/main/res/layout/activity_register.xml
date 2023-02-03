@@ -7,6 +7,42 @@
     android:background="#FFFFFF"
     tools:context=".RegisterActivity">
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/editTextConfirmPassword"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rectangle_button"
+        android:gravity="center_vertical"
+        android:hint="입력하세요"
+        android:paddingLeft="20dp"
+        android:textColorHint="#B2B2B2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.46" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/editTextInputName"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rectangle_button"
+        android:gravity="center_vertical"
+        android:hint="입력하세요"
+        android:paddingLeft="20dp"
+        android:textColorHint="#B2B2B2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.59" />
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/back_login"
         android:layout_width="409dp"
@@ -17,120 +53,183 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <EditText
-        android:id="@+id/editTextName"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/editTextInputId"
+        android:layout_width="235dp"
+        android:layout_height="38dp"
         android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="이름"
-        android:inputType="textEmailAddress"
+        android:background="@drawable/rectangle_button"
+        android:gravity="center_vertical"
+        android:hint="입력하세요"
+        android:paddingLeft="20dp"
         android:textColorHint="#B2B2B2"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.283" />
+        app:layout_constraintHorizontal_bias="0.255"
+        app:layout_constraintVertical_bias="0.2" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ConfirmId"
+        android:layout_width="100dp"
+        android:layout_height="38dp"
+        android:background="@drawable/rectangle_button_c91f22e1"
+        android:hint="중복확인"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.209" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/ConfirmNumber"
+        android:layout_width="100dp"
+        android:layout_height="38dp"
+        android:background="@drawable/rectangle_button_c91f22e1"
+        android:hint="인증하기"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.722" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/editTextInputNumber"
+        android:layout_width="235dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rectangle_button"
+        android:gravity="center_vertical"
+        android:hint="입력하세요"
+        android:paddingLeft="20dp"
+        android:textColorHint="#B2B2B2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.255"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.72" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/editTextInputPassword"
+        android:layout_width="300dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rectangle_button"
+        android:gravity="center_vertical"
+        android:hint="입력하세요"
+        android:paddingLeft="20dp"
+        android:textColorHint="#B2B2B2"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.405"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.33" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="167dp"
-        android:layout_height="60dp"
+        android:layout_width="81dp"
+        android:layout_height="24dp"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/nanum_gothic_extra_bold"
-        android:text="Register"
-        android:textColor="#1F22E1"
-        android:textSize="40sp"
+        android:text="회원가입"
+        android:textColor="#000000"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.179" />
+        app:layout_constraintVertical_bias="0.011" />
 
-    <EditText
-        android:id="@+id/editTextEmailAddress"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:hint="이메일주소"
-        android:inputType="textEmailAddress"
-        android:textColorHint="#B2B2B2"
-        android:textSize="16sp"
+    <TextView
+        android:id="@+id/textViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="아이디"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.150"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.456" />
+        app:layout_constraintVertical_bias="0.17" />
 
-    <EditText
-        android:id="@+id/editTextpwd"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:hint="비밀번호"
-        android:inputType="textPassword"
-        android:textColorHint="#B2B2B2"
-        android:textSize="16sp"
+    <TextView
+        android:id="@+id/textViewPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.157"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.564" />
+        app:layout_constraintVertical_bias="0.299" />
 
-    <EditText
-        android:id="@+id/editTextBirth"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="생년월일(숫자로8자리)"
-        android:inputType="number"
-        android:textColorHint="#B2B2B2"
-        android:textSize="16sp"
+    <TextView
+        android:id="@+id/textViewConfirmPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="비밀번호 재입력"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.18"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.648" />
+        app:layout_constraintVertical_bias="0.424" />
 
-
-    <EditText
-        android:id="@+id/editTextPhoneNumber"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="전화번호"
-        android:inputType="textEmailAddress"
-        android:textColorHint="#B2B2B2"
-        android:textSize="16sp"
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이름"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.145"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.375" />
+        app:layout_constraintVertical_bias="0.55" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="178dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="130dp"
-        android:layout_marginEnd="130dp"
-        android:text="Start"
-        android:textSize="25sp"
-        android:fontFamily="@font/nanum_gothic_extra_bold"
+    <TextView
+        android:id="@+id/textViewNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="휴대폰 번호"
+        android:textSize="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintHorizontal_bias="0.165"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/back_login"
-        app:layout_constraintVertical_bias="0.781" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.675" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/RegisterButton"
+        android:layout_width="330dp"
+        android:layout_height="54dp"
+        android:background="@drawable/rectangle_button_c91f22e1"
+        android:hint="가입하기"
+        android:textColorHint="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.88" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
