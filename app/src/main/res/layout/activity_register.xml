@@ -137,7 +137,7 @@
         app:layout_constraintVertical_bias="0.33" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/textView"
         android:layout_width="81dp"
         android:layout_height="24dp"
         android:layout_marginTop="8dp"
