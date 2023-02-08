@@ -8,7 +8,8 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="210dp"
         android:layout_height="73dp"
         android:fontFamily="@font/saira_stencil_one"
