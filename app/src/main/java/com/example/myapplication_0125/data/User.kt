@@ -1,6 +1,7 @@
 package com.example.myapplication_0125.data
 
 import androidx.room.Entity
+import androidx.room.Fts4
 import androidx.room.PrimaryKey
 
 

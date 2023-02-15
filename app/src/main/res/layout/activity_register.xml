@@ -35,10 +35,10 @@
         android:layout_height="43dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:inputType="textEmailAddress"
         android:background="@drawable/rectangle_button"
         android:gravity="center_vertical"
         android:hint="입력하세요"
+        android:inputType="textEmailAddress"
         android:paddingLeft="20dp"
         android:textColorHint="#B2B2B2"
         android:textSize="16sp"
@@ -120,8 +120,8 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/rectangle_button"
         android:gravity="center_vertical"
-        android:inputType="textPersonName"
         android:hint="입력하세요"
+        android:inputType="textPersonName"
         android:paddingLeft="20dp"
         android:textColorHint="#B2B2B2"
         android:textSize="16sp"
@@ -153,8 +153,8 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/rectangle_button"
         android:gravity="center_vertical"
-        android:inputType="phone"
         android:hint="입력하세요"
+        android:inputType="phone"
         android:paddingLeft="20dp"
         android:textColorHint="#B2B2B2"
         android:textSize="16sp"
@@ -224,8 +224,8 @@
         android:layout_marginEnd="8dp"
         android:background="@drawable/rectangle_button"
         android:gravity="center_vertical"
-        android:inputType="textPassword"
         android:hint="입력하세요"
+        android:inputType="textPassword"
         android:paddingLeft="20dp"
         android:textColorHint="#B2B2B2"
         android:textSize="16sp"
@@ -251,6 +251,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.011" />
+
+    <ImageButton
+        android:id="@+id/emptyButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/back_login"
+        app:layout_constraintEnd_toEndOf="@+id/back_login"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/back_login"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.307"
+        app:srcCompat="@drawable/recycle_bin_sketch" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

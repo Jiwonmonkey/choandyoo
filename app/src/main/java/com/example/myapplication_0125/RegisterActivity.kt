@@ -3,10 +3,8 @@ package com.example.myapplication_0125
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
-import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication_0125.data.User
 import com.example.myapplication_0125.data.UserViewModel
@@ -15,6 +13,10 @@ import kotlinx.android.synthetic.main.activity_register.*
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var mUserViewModel: UserViewModel
+
+    private val email = addEmail.text.toString()
+
+    private var checkDuplicatedId = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -27,35 +29,63 @@ class RegisterActivity : AppCompatActivity() {
 
         mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
 
+        // 회원가입 버튼 누르면 데이터 삽입
         RegisterButton.setOnClickListener {
             insertDataToDatabase()
         }
 
-    }
+        // 휴지통 버튼 누르면 모든 데이터 삭제
+        // user 속성 바꿀 때 테이블 비우기 용도로 만든 거라서 나중에 삭제할 것 ! !
+        emptyButton.setOnClickListener {
+            deleteAllDataToDatabase()
+        }
 
+        // 중복 확인 체크
+        ConfirmId.setOnClickListener {
+            checkExistDuplicatedId()
+        }
+
+    }
     private fun insertDataToDatabase() {
 
-        val email = addEmail.text.toString()
         val pwd = addPwd.text.toString()
         val name = addName.text.toString()
         val phone = addPhone.text.toString()
+        
+        if(!checkDuplicatedId) {
+            if(inputCheck(email, pwd, name, phone)){
 
-        if(inputCheck(email, pwd, name, phone)){
+                // Create User Object
+                val user = User(0, email, pwd, name, phone)
 
-            // Create User Object
-            val user = User(0, email, pwd, name, phone)
+                // Add Data to Database
+                mUserViewModel.addUser(user)
 
-            // Add Data to Database
-            mUserViewModel.addUser(user)
-
-            Toast.makeText(this@RegisterActivity, "Successfully added!", Toast.LENGTH_LONG).show()
+                Toast.makeText(this@RegisterActivity, "Successfully added!", Toast.LENGTH_LONG).show()
+            }else {
+                Toast.makeText(this@RegisterActivity, "Please fill out add fields.", Toast.LENGTH_LONG).show()
+            }
         }else {
-            Toast.makeText(this@RegisterActivity, "Please fill out add fields.", Toast.LENGTH_LONG).show()
+            Toast.makeText(this@RegisterActivity, "Please check your new id is duplicated!", Toast.LENGTH_LONG).show()
         }
     }
 
     private fun inputCheck(email: String, pwd: String, name: String, phone: String): Boolean {
         return !(TextUtils.isEmpty(email) && TextUtils.isEmpty(pwd) && TextUtils.isEmpty(name) && TextUtils.isEmpty(phone))
+    }
+
+    // 데이터 전부 삭제하기
+    private fun deleteAllDataToDatabase() {
+        mUserViewModel.deleteAllUser()
+        Toast.makeText(this@RegisterActivity, "Successfully deleted all data!", Toast.LENGTH_LONG).show()
+    }
+
+    // 아이디 존재 확인
+    private fun checkExistDuplicatedId(): Boolean {
+        val value = mUserViewModel.getIdUser(email)
+        checkDuplicatedId = !value!!.equals("")
+        Toast.makeText(this@RegisterActivity, "already existed!", Toast.LENGTH_LONG).show()
+        return checkDuplicatedId
     }
 }
 

@@ -22,5 +22,6 @@ class LoginActivity : AppCompatActivity() {
         loginBtn.setOnClickListener {
 
         }
+
     }
 }
