@@ -14,8 +14,6 @@ class RegisterActivity : AppCompatActivity() {
 
     private lateinit var mUserViewModel: UserViewModel
 
-    private val email = addEmail.text.toString()
-
     private var checkDuplicatedId = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,6 +46,7 @@ class RegisterActivity : AppCompatActivity() {
     }
     private fun insertDataToDatabase() {
 
+        val email = addEmail.text.toString()
         val pwd = addPwd.text.toString()
         val name = addName.text.toString()
         val phone = addPhone.text.toString()
@@ -82,9 +81,16 @@ class RegisterActivity : AppCompatActivity() {
 
     // 아이디 존재 확인
     private fun checkExistDuplicatedId(): Boolean {
-        val value = mUserViewModel.getIdUser(email)
-        checkDuplicatedId = !value!!.equals("")
-        Toast.makeText(this@RegisterActivity, "already existed!", Toast.LENGTH_LONG).show()
+
+
+        val value = mUserViewModel.getIdUser(addEmail.text.toString())
+        if(value != null) {
+            checkDuplicatedId = true
+            Toast.makeText(this@RegisterActivity, "already existed!", Toast.LENGTH_LONG).show()
+        }else {
+            Toast.makeText(this@RegisterActivity, "available id", Toast.LENGTH_LONG).show()
+
+        }
         return checkDuplicatedId
     }
 }
