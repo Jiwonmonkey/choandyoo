@@ -1,8 +1,10 @@
 package com.example.myapplication_0125
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.lifecycle.ViewModelProvider
@@ -27,9 +29,12 @@ class RegisterActivity : AppCompatActivity() {
 
         mUserViewModel = ViewModelProvider(this).get(UserViewModel::class.java)
 
-        // 회원가입 버튼 누르면 데이터 삽입
+        // 회원가입 버튼 누르면 데이터 삽입 + 캘린더 화면으로 넘어가기
         RegisterButton.setOnClickListener {
             insertDataToDatabase()
+            
+            val intent = Intent(this, CalendarActivity::class.java)
+            startActivity(intent)
         }
 
         // 휴지통 버튼 누르면 모든 데이터 삭제
