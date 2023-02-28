@@ -19,7 +19,8 @@ class LoginActivity : AppCompatActivity() {
 
         //로그인 후 시작 화면으로 이동
         login_button.setOnClickListener {
-
+            val intent = Intent(this, CalendarActivity::class.java)
+            startActivity(intent)
         }
 
     }

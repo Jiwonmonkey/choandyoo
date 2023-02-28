@@ -32,7 +32,6 @@ class RegisterActivity : AppCompatActivity() {
         // 회원가입 버튼 누르면 데이터 삽입 + 캘린더 화면으로 넘어가기
         RegisterButton.setOnClickListener {
             insertDataToDatabase()
-            
             val intent = Intent(this, CalendarActivity::class.java)
             startActivity(intent)
         }
