@@ -1,5 +1,6 @@
 package com.example.myapplication_0125
 
+import android.graphics.drawable.Drawable
 import android.media.Image
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -86,10 +87,10 @@ class CalendarActivity : AppCompatActivity(), OnItemListener {
 
         var yearMonth = YearMonth.from(date)
 
-        // 해당 월 마지막 날짜 가져오기
+        // 해당 월 마지막 날짜 가져 오기
         var lastDay = yearMonth.lengthOfMonth()
 
-        // 해당 월 첫 번째 날 가져오기
+        // 해당 월 첫 번째 날 가져 오기
         var firstDay = selectedDate.withDayOfMonth(1)
 
         // 첫 번째 날 요일 가져오기
@@ -112,6 +113,8 @@ class CalendarActivity : AppCompatActivity(), OnItemListener {
         selectedDate = selectedDate.withDayOfMonth(clickDay)
         setMonthView()
     }
+
+
 }
 
 
